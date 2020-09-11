@@ -5,11 +5,12 @@ import './css/styles.css';
 import CurrencySearch from './currencySearch.js';
 
 
-function clearFields() {
-  $('#search-input').val("");
-  $('#conversion').val("");
-  $('.showAmount').text("");
+function currencyResult() {
+  $('#currency-value').val("");
+  $('#currency-type').val("");
   $('.showErrors').text("");
+  $('.showResult').text("");
+  $('.showNotify').text("");
 }
 
 $(document).ready(function() {

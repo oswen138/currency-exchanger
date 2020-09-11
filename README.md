@@ -1,6 +1,6 @@
 # _Currency Exchanger_
 
-#### _This program converts USD currency to 5 other different currency values. 9/11/2020.
+#### This program converts USD currency to 5 other different currency values. 9/11/2020.
 
 #### By _**Ophelia Swen**_
 
@@ -22,13 +22,11 @@ _To generate your unique API key visit https://www.exchangerate-api.com/. Fill o
 * _clone this repository_
 * _navigate to the root dir of this project_
 * _in terminal do command npm install_
-* _generate an api key at https://www.exchangerate-api.com/ _
+* _generate an api key at https://www.exchangerate-api.com/_
 * _create a .env file in the root dir_
 * _in .env file add API_KEY=[your api key]_
 * _in terminal do command npm run start_
 
-
-_To generate an api key to use NASA api's go to api.nasa.gov. Generate a key following their instructions and enter the key into the .env file as listed above._
 
 ## Known Bugs
 
@@ -36,7 +34,7 @@ _No Known bugs_
 
 ## Support and contact details
 
-_Contact Information: Ophelia Swen: ophelia.swen@gmail.com 
+_Contact Information: Ophelia Swen: ophelia.swen@gmail.com_
 
 ## Technologies Used
 
