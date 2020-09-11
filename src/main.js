@@ -18,16 +18,31 @@ function myResult()
  var type=document.getElementById("currency-type").value;
 
   if (type ==="AUD")
-    {
-      document.getElementById("result").innerHTML= currency.value * 1.3749;
-    } else if (type === "CAD")
-      document.getElementById("result").innerHTML= currency.value * 1.3164;
-    }
-
-
-
-
-
+  {
+    document.getElementById("result").innerHTML= currency.value * 1.3749;
+  }
+  else if (type === "CAD")
+  {
+    document.getElementById("result").innerHTML= currency.value * 1.3164;
+  }
+  else if (type === "HKD") 
+  {
+    document.getElementById("result").innerHTML= currency.value * 6.2870;
+  }
+  else if (type === "GBP") 
+  {
+    document.getElementById("result").innerHTML= currency.value * 0.7741;
+  }
+  else if (type === "THB") 
+  {
+    document.getElementById("result").innerHTML= currency.value * 31.2781;
+  }
+  else 
+  {
+    alert('Your currency is not valid.');
+  }
+}
+  return myResult()
 
 
 $(document).ready(function() {
