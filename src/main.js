@@ -7,29 +7,9 @@ import {currencySearch} from './currencySearch.js';
 function currencySearch(value)
 let 
 
-function randomDate(start, end) {
-  let d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())),
-    month = '' + (d.getMonth() + 1),
-    day = '' + d.getDate(),
-    year = d.getFullYear();
 
-  if (month.length < 2) month = '0' + month;
-  if (day.length < 2) day = '0' + day;
 
-  return [year, month, day].join('-');
-}
 
-function randomDateNatural(start, end) {
-  let d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())),
-    month = '' + (d.getMonth() + 1),
-    day = '' + d.getDate(),
-    year = d.getFullYear();
-
-  if (month.length < 2) month = '0' + month;
-  if (day.length < 2) day = '0' + day;
-
-  return [year, month, day].join('/');
-}
 function writeImages(body) {
   let html = '';
   html += `<div class="carousel-item active" >`;
