@@ -13,26 +13,19 @@ function currencyResult() {
   $('.showNotify').text("");
 }
 
-const 
 function myResult() 
 {
  var type=document.getElementById("currency-type").value;
 
   if (type ==="AUD")
     {
-      document.getElementById("result").innerHTML= currency.value * 1.470
+      document.getElementById("result").innerHTML= currency.value * 1.3749;
+    } else if (type === "CAD")
+      document.getElementById("result").innerHTML= currency.value * 1.3164;
     }
 
 
 
-}
-  let html ='';
-  html += '<h2>${currencyValue} '
-  const result = currencyResult;
-  let 
-}
-
-function notify()
 
 
 
