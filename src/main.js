@@ -13,16 +13,38 @@ function currencyResult() {
   $('.showNotify').text("");
 }
 
+const 
+function myResult() 
+{
+ var type=document.getElementById("currency-type").value;
+
+  if (type ==="AUD")
+    {
+      document.getElementById("result").innerHTML= currency.value * 1.470
+    }
+
+
+
+}
+  let html ='';
+  html += '<h2>${currencyValue} '
+  const result = currencyResult;
+  let 
+}
+
+function notify()
+
+
+
+
 $(document).ready(function() {
   $('#conversion').onclick(function() {
-    let currencyValue = $('#currency-value').val();
     let currencyType = $('#currency-type').val();
     currencyResult();
-    let promise = CurrencySearch.getCurrency(currencyValue);
     let promise = CurrencySearch.getCurrency(currencyType);
     promise.then(function(response) {
       const body = JSON.parse(response);
-      $('.showResult').text(`Your currency converted is ${currencyType} is ${body.main.result}%`);
+      $('.showResult').text(`Your currency converted is ${currency_Type} is ${body.main.result}%`);
       $('.showNotify').text(`Your chosen currency to convert is not included. ${body.main.notify}`);
     }, function(error) {
       $('.showErrors').text(`Your request is facing an error: ${error}`);
