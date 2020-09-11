@@ -2,9 +2,10 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import ImageSearch from './imageSearch.js';
-import {dailyImage, asteroidList} from './randomDate.js';
-import {dailyEarth} from './randomEarth';
+import {currencySearch} from './currencySearch.js';
+
+function currencySearch(value)
+let 
 
 function randomDate(start, end) {
   let d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())),

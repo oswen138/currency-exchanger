@@ -1,8 +1,8 @@
-export default class ImageSearch {
-  static getImage(searchTerm) {
+export default class currencySearch {
+  static getCurrency(chooseValue) {
     return new Promise(function (resolve, reject) {
       let request = new XMLHttpRequest();
-      const url = `https://images-api.nasa.gov/search?q=${searchTerm}&media_type=image`;
+      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${chooseValue}`;
       request.onload = function() {
         if(this.status === 200) {
           resolve(request.response);

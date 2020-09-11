@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Currency Exchanger</title>
- 
 </head>
 <body>
   <div  class="container">
@@ -11,35 +10,20 @@
     </div>
     <div>
       <label for="search-input">Convert your currency:</label>
-      <input type="text" id="search-input">
-      <button id='search-button' class="btn btn-outline-danger">Search</button>
-    </div>  
-    <div>
-      <label for="date">Check out the Asteroids!</label>
-      <input type="date" id="date" name="get-date" min="1930-01-01" max="2020-09-15">
-      <button class="btn-success" id="button">List</button>
-    </div>
-    <div id="image-search-results" class="carousel slide" data-interval="false" data-ride="carousel">
-      <div class="carousel-inner"></div>
-      <a class="carousel-control-prev" href="#image-search-results" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#image-search-results" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <div id="random-date-results">
-      <img src="" id="randomImage" >
-    </div>
-    <div id="asteroid"> 
-      <ul id="displayList"></ul>
-    </div> 
-    <div id="earthPic">
-      <img src="" id="earthImage">
-      <p id="image-date"></p>
-    </div>
+    <form>
+      <input type="number" id="search-input" placeholder="Input Currency">
+      <select id="rate">
+        <option disabled selected value ="select"
+        >Choose Currency</option>
+        <option value="1">USD</option>
+        <option value="2">AUD</option>
+        <option value="3">CAD</option>
+        <option value="4">EUR</option>
+        <option value="5">UYU</option>
+      </select>
+      <a href="#"><p><button id="search">Get Conversion Rate</button></p></a>
+      <input type="text" id="conversion" placeholder="result">
+    </form>
   </div>
 </body>
 </html>
