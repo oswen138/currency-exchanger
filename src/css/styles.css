@@ -1,0 +1,84 @@
+body{
+  background-color: rgb(163, 162, 179);
+  color: rgb(24, 26, 25);
+}
+.card{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.search-card img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-card p {
+  color: black;
+}
+.carousel{
+  display: none;
+}
+
+.jumbotron{
+  text-align: center;
+  background-color: rgb(221, 17, 17);
+}
+.random-card{
+  background-color: black;
+  color: white;
+  
+}
+.random-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+  background-color: black;
+}
+
+.title-head {
+  font-size: xx-large;
+}
+label{
+  color: red;
+}
+
+p {
+  color: whitesmoke;
+}
+#displayList{
+  color: red;
+  font-size:large;
+}
+
+
+
+
+
+#earthPic img {
+  
+  max-width: 55%;
+  height: auto;
+  
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#displayList li{
+  color: red;
+  font-size: x-large;
+}
+#displayList li ul li{
+  color:white;
+  font-size:large;
+}
