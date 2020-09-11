@@ -14,15 +14,18 @@ function currencyResult() {
 }
 
 $(document).ready(function() {
-  $('#convert').click(function() {
-    let currencyType = $('#conversion').val();
-    clearFields();
+  $('#conversion').onclick(function() {
+    let currencyValue = $('#currency-value').val();
+    let currencyType = $('#currency-type').val();
+    currencyResult();
+    let promise = CurrencySearch.getCurrency(currencyValue);
     let promise = CurrencySearch.getCurrency(currencyType);
     promise.then(function(response) {
       const body = JSON.parse(response);
-      $('.showAmount').text(`The value of your currency is ${currencyType}`);
+      $('.showResult').text(`Your currency converted is ${currencyType} is ${body.main.result}%`);
+      $('.showNotify').text(`Your chosen currency to convert is not included. ${body.main.notify}`);
     }, function(error) {
-      $('.showErrors').text(`There was an error processing your request: ${error}`);
+      $('.showErrors').text(`Your request is facing an error: ${error}`);
     });
   });
 });
