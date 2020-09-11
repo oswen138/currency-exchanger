@@ -1,14 +1,14 @@
-# _NASA Photos_
+# _Currency Exchanger_
 
-#### _This program accesses different NASA api's and based on user input will show different information/photos, 9/10/2020_
+#### _This program converts USD currency to 5 other different currency values. 9/11/2020.
 
-#### By _**Joseph Nilles, Forrest Reiland, Ophelia Swen**_
+#### By _**Ophelia Swen**_
 
 ## Description
 
-_A user may enter a search term and images stored in the NASA Image and Video Library API that match the search term are returned to the user. A user may click through the images using a carousel. A user can click a button that returns a random image from the Astronomy Picture of the Day API. The image is returned with a short title description. Similarily, a user can click a button which returns a random image of Earth photographed from space. This feature pulls images from NASA's Earth Polychromatic Imaging Camera which has been photographing Earth daily since 2015. The site also allows a user to select any date using an interactive calender feature. The calender returns a list of the closest asteroids to Earth on the input date along with the size of the asteroid. This feature pulls data from NASA's Near Earth Object Web Service API._
+_A user can convert USD currency value for 5 other different currency values. This application utilizes the ExchangeRate-API._
 
-_To generate your unique API key visit api.nasa.gov. Fill out the required information to generate your API key. Your API key should be stored within the main file directory in a file named ".env". The API should be stored in the variable "API_KEY". Furthermore, the .env file should not be made public or shared to Github._
+_To generate your unique API key visit https://www.exchangerate-api.com/. Fill out the required information to generate your API key. After gaining access to a dashboard that includes your API key, store your API key within the main file directory in a file named ".env". The API should be stored in the variable "API_KEY". Furthermore, the .env file should not be made public or shared to Github._
 
 ### Specs
 | Spec | Input | Output |
