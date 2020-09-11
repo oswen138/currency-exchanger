@@ -13,18 +13,16 @@ _To generate your unique API key visit https://www.exchangerate-api.com/. Fill o
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-|**Program takes user input and returns photos from NASA Image and Video Library API** | Input: "Mars" | Photo Generates |
-|**Program takes user input and returns photos from NASA APOD API** | Click Button | Photo Generates |
-|**Program takes user input and returns photos from NASA EPIC API**| Click Button | Photo Generates |
-|**Program takes user input and returns photos from NASA Near Earth Object Web Service API**| Input: "09/10/2020"  | Name: (2020 PU) Size: 173.0374186925 - 386.9234308474 feet diameter |
-
+|**Program takes user input and returns currency value from ExchangeRate API** | Input: "15" | "1125.18" |
+|**Program returns API error message** | 404 | Location not found |
+|**Program returns notification that currency is not found**| Franc | Not a currency |
 
 ## Setup/Installation Requirements
 
 * _clone this repository_
 * _navigate to the root dir of this project_
 * _in terminal do command npm install_
-* _generate an api key at api.nasa.gov_
+* _generate an api key at https://www.exchangerate-api.com/ _
 * _create a .env file in the root dir_
 * _in .env file add API_KEY=[your api key]_
 * _in terminal do command npm run start_
@@ -38,14 +36,14 @@ _No Known bugs_
 
 ## Support and contact details
 
-_Contact Information: Joseph Nilles: jbnilles24@gmail.com, Ophelia Swen: ophelia.swen@gmail.com , Forrest Reiland: freiland@email.arizona.edu_
+_Contact Information: Ophelia Swen: ophelia.swen@gmail.com 
 
 ## Technologies Used
 
-_This project uses HTML, CSS, Bootstrap, jQuery, and JavaScript, with the help of Postman._
+_This project uses HTML, CSS, Bootstrap, jQuery, and JavaScript, aided by the Postman tool._
 
 ### License
 
 *This software is available with an MIT license*
 
-Copyright (c) 2020 **_Joseph Nilles, Ophelia Swen, Forrest Reiland_**
+Copyright (c) 2020 **_Ophelia Swen_**

@@ -17,15 +17,3 @@ export default class currencySearch {
   }
 }
 
-
-function getValue(response)
-
-function getElements(response) {
-  $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
-  $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp} degrees.`);
-}
-});
-});
-
-// https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${chooseValue}
-
