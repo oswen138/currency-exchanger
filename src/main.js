@@ -4,6 +4,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencySearch from './currencySearch.js';
 
+function clearFields() {
+  $('#currency-value').val("");
+  $()
+}
+function getCurrency(response) {
+  if (response.main) {
+    $('.showCurrency').text('The converted value in ${response.')
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 function currencyResult() {
   $('#currency-value').val("");
