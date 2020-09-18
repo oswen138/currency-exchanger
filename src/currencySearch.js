@@ -1,7 +1,7 @@
 export default class CurrencySearch {
-  static async getCurrency() {
+  static async getCurrency(conversion_rates) {
     try {
-      const response = await fetch ('https://v6.exchangerate-api.com/v6/8a140450d8dad35f23a54bc1/latest/USD');
+      const response = await fetch ('https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${conversion_rates}');
       if (!response.ok) {
         throw Error(response.statusText);
       }
