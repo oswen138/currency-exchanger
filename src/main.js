@@ -5,36 +5,28 @@ import './css/styles.css';
 import CurrencySearch from './currencySearch.js';
 
 function clearFields() {
-  $('#currency-value').val("");
-  $('#currency-type').text("");
+  $('#currency-type').val("");
   $('.showErrors').text("");
   $('.showCurrency').text("");
-  $('.showNotify').text("");
 }
 
-function getCurrency(response) {
+function getElements(response) {
   if (response.main) {
-    $('.showCurrency').text(`The converted value in ${response.main.currency} is:`);
-    $('.showNotify').text(`The currency in ${response.main.notify} does not exist.`);
+    $('.showCurrency').text(`The currency exchange for ${response.USD} is ${response.conversion_rates[0]}.`);
   } else {
-    $('.showErrors').text(`There was an error: ${response}`);
+    $('.showErrors').text(`There was an error: ${response.message}`);
   }
 }
 
-async function makeApiCall(conversion_rates) {
-  const response = await CurrencySearch.getCurrency(conversion_rates);
-  getCurrency(response);
-}
-
 $(document).ready(function() {
-  $('#conversion').click(function() {
+  $('#conversionRate').click(function() {
+    let type = $('#conversionRate').val();
     clearFields();
-    makeApiCall();
+    CurrencySearch.getCurrency(type)
+      .then(function(response) {
+        getElements(response);
+      });
   });
 });
-
-
-
-
 
 
