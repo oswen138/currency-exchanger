@@ -15,6 +15,7 @@ function getElements(response) {
     $('.showCurrency').text(`The currency exchange for ${response.USD} is ${response.conversion_rates[0]}.`);
   } else {
     $('.showErrors').text(`There was an error: ${response.message}`);
+    $('.showNotify').text('not a valid currency');
   }
 }
 
