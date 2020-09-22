@@ -9,7 +9,15 @@
     <label for="currency-value">Enter USD value amount:</label>
     <input id="currency-value" type="number">
     <label for="currency-type">Enter currency type:</label>
-    <input id="currency-type" type="text">
+    <select id="countryInput" name="countryInput">
+      <option value="AED">AED (United Arab Emirates dirham)</option>
+      <option value="ARS">ARS (Argentine peso)</option>
+      <option value="AUD">AUD (Australian dollar)</option>
+      <option value="BGN">BGN (Bulgarian lev)</option>
+      <option value="BRL">BRL (Brazilian real)</option>
+      <option value="BSD">BSD (Bahamian dollar)</option>
+      <option value="HJK">HKJ (Hungarian Koala Jul)</option>
+    </select>
     <button class="btn-success" id="conversionRate">Get Converted Rate</button>
     <div class="showErrors"></div>
     <div class="showCurrency"></div>
@@ -17,16 +25,6 @@
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
 
 
 
