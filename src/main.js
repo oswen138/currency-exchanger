@@ -10,25 +10,27 @@ function clearFields() {
   $('.showCurrency').text("");
   $('.showNotify').text("");
 }
-function getElements(response) {
-  console.log(response);
-  let selection = country;
-    if(selection === "AED") {
-      $('#showCurrency').text('selection * `${response.conversion_rates.AED}`');
-    } else if (selection === "ARS") {
-      $('#showCurrency').text('selection * `${response.conversion_rates.ARS}`');
-    } else if (selection === "AUD") {
-      $('#showCurrency').text('selection * `${response.conversion_rates.AUD}`');
-    } else if (selection === "BGN") {
-      $('#showCurrency').text('selection * `${response.conversion_rates.BGN}`');
-    } else if (selection === "BRL") {
-      $('#showCurrency').text('selection * `${response.conversion_rates.BRL}`');
-    } else if (selection === "BSD") {
-      $('#showCurrency').text('selection * `${response.conversion_rates.BSD}`');
-    } else if (selection === "HJK") {
+function getElements(response, country, input) {
+  console.log(response, country);
+  console.log(JSON.parse(response));
+  response = JSON.parse(response);
+  
+    if(country === "AED") {
+      $('.showCurrency').text(`${response.conversion_rates.AED*input}`);
+    } else if (country === "ARS") {
+      $('.showCurrency').text(`${response.conversion_rates.ARS*input}`);
+    } else if (country === "AUD") {
+      $('.showCurrency').text(`${response.conversion_rates.AUD*input}`);
+    } else if (country === "BGN") {
+      $('#showCurrency').text(`${response.conversion_rates.BGN*input}`);
+    } else if (country === "BRL") {
+      $('.showCurrency').text(`${response.conversion_rates.BRL*input}`);
+    } else if (country === "BSD") {
+      $('.showCurrency').text(`${response.conversion_rates.BSD*input}`);
+    } else if (country === "HJK") {
       $(".showNotify").text(`Alert: Currency not in database`);
     } else {
-      $(".showErrors").text(`Error Alert: ${response.message}`);
+      $(".showErrors").text(`Error Alert: ${response.result}`);
     }
   }
 
@@ -36,10 +38,11 @@ $(document).ready(function() {
   $('#conversionRate').click(function() {
     event.preventDefault();
     let country = $('#currency-type').val();
+    let input = $('#currency-value').val();
     clearFields();
-    let promise = CurrencySearch.getCurrency(country);
+    let promise = CurrencySearch.getCurrency();
     promise.then(function(response) {
-      getElements(response);
+      getElements(response, country, input);
     });
   });
 });
