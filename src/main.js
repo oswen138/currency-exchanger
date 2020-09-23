@@ -16,19 +16,19 @@ function getElements(response, country, input) {
   response = JSON.parse(response);
   
     if(country === "AED") {
-      $('.showCurrency').text(`${response.conversion_rates.AED*input}`);
+      $('.showCurrency').text(`The converted value from USD to AED is ${response.conversion_rates.AED*input}`);
     } else if (country === "ARS") {
-      $('.showCurrency').text(`${response.conversion_rates.ARS*input}`);
+      $('.showCurrency').text(`The converted value from USD to ARS is ${response.conversion_rates.ARS*input}`);
     } else if (country === "AUD") {
-      $('.showCurrency').text(`${response.conversion_rates.AUD*input}`);
+      $('.showCurrency').text(`The converted value from USD to AUD is ${response.conversion_rates.AUD*input}`);
     } else if (country === "BGN") {
-      $('#showCurrency').text(`${response.conversion_rates.BGN*input}`);
+      $('#showCurrency').text(`The converted value from USD to BGN is ${response.conversion_rates.BGN*input}`);
     } else if (country === "BRL") {
-      $('.showCurrency').text(`${response.conversion_rates.BRL*input}`);
+      $('.showCurrency').text(`The converted value from USD to BRL is ${response.conversion_rates.BRL*input}`);
     } else if (country === "BSD") {
-      $('.showCurrency').text(`${response.conversion_rates.BSD*input}`);
+      $('.showCurrency').text(`The converted value from USD to BSD is ${response.conversion_rates.BSD*input}`);
     } else if (country === "HJK") {
-      $(".showNotify").text(`Alert: Currency not in database`);
+      $(".showNotify").text(`Alert: Currency not in database, go ask the Koalas`);
     } else {
       $(".showErrors").text(`Error Alert: ${response.result}`);
     }
